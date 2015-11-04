@@ -31,6 +31,13 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="nRY-IO-c5W"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAi-9d-M26">
+                                <rect key="frame" x="9" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Settings" id="e0S-ys-dAT"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -40,12 +47,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="settingsButton" destination="e0S-ys-dAT" id="czT-fe-Hxp"/>
                         <outlet property="tableView" destination="lZe-WA-s1f" id="Qef-Gu-W1S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="353"/>
+            <point key="canvasLocation" x="312" y="175"/>
         </scene>
     </scenes>
 </document>
