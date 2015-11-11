@@ -33,8 +33,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         NSLog("Segue prepared");
         if (segue.identifier == "questionSegue") {
-            let questionViewController : QuestionViewController = QuestionViewController();
-            questionViewController.testData = "asdfasdf";
+            let svc = segue!.destinationViewController as! QuestionViewController;
+            svc.subjectText = self.selectedItem;
         }
     }
     

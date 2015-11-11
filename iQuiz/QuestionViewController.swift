@@ -9,11 +9,16 @@
 import UIKit
 
 class QuestionViewController : UIViewController {
-    var testData : String!;
+    @IBOutlet weak var subjectLabel: UILabel!
+    var subjectText : String!
+    var questionArray : [String]!;
+    var questionNumber : Int!;
+    var numberCorrect : Int!;
+    var correctAnswerArray : [Int]!;
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        NSLog("\(testData)");
+        subjectLabel.text = subjectText;
         
     }
     

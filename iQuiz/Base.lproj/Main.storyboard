@@ -81,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbh-mz-m0a">
-                                <rect key="frame" x="279" y="126" width="42" height="21"/>
+                                <rect key="frame" x="279" y="85" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -94,6 +94,9 @@
                             <constraint firstItem="xbh-mz-m0a" firstAttribute="centerX" secondItem="lLG-Hd-sZu" secondAttribute="centerX" id="UUg-QJ-jcB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="subjectLabel" destination="xbh-mz-m0a" id="wVk-eY-Xri"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gs1-1h-sTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
