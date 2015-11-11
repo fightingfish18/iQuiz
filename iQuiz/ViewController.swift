@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet
     var tableView : UITableView!;
     @IBOutlet weak var settingsButton: UIBarButtonItem!
+    var selectedItem : String!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        NSLog("Segue prepared");
+        if (segue.identifier == "questionSegue") {
+            let questionViewController : QuestionViewController = QuestionViewController();
+            questionViewController.testData = "asdfasdf";
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +53,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        self.selectedItem = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text;
+        self.performSegueWithIdentifier("questionSegue", sender: self);
         NSLog("Pressed");
+        
     }
     
     func settingsAlert(sender: UIBarButtonItem) {

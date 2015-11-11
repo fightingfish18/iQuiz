@@ -21,11 +21,23 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="PWb-QL-aJq">
-                                    <rect key="frame" x="0.0" y="0.0" width="339" height="44"/>
+                                    <rect key="frame" x="0.0" y="72" width="339" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qgj-2A-8cY">
+                                        <rect key="frame" x="0.0" y="28" width="339" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgj-2A-8cY" id="2k2-Xl-ic2">
+                                            <rect key="frame" x="0.0" y="0.0" width="339" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="5Uk-qC-dkn"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="nRY-IO-c5W"/>
@@ -49,11 +61,43 @@
                     <connections>
                         <outlet property="settingsButton" destination="e0S-ys-dAT" id="czT-fe-Hxp"/>
                         <outlet property="tableView" destination="lZe-WA-s1f" id="Qef-Gu-W1S"/>
+                        <segue destination="zOm-dC-q1t" kind="show" identifier="questionSegue" id="UwR-jL-Hbs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="175"/>
+            <point key="canvasLocation" x="259" y="138"/>
+        </scene>
+        <!--questionView-->
+        <scene sceneID="hwv-GJ-5zN">
+            <objects>
+                <viewController storyboardIdentifier="questionView" title="questionView" id="zOm-dC-q1t" customClass="QuestionViewController" customModule="iQuiz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N8u-3P-mzp"/>
+                        <viewControllerLayoutGuide type="bottom" id="3nG-3i-mGn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lLG-Hd-sZu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbh-mz-m0a">
+                                <rect key="frame" x="279" y="126" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xbh-mz-m0a" firstAttribute="centerX" secondItem="lLG-Hd-sZu" secondAttribute="centerX" id="UUg-QJ-jcB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gs1-1h-sTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="138"/>
         </scene>
     </scenes>
 </document>

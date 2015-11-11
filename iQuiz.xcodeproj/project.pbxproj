@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844D31FF1BF2DD63001DF427 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D31FE1BF2DD63001DF427 /* QuestionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		84B52E381BE99D3500F55609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B52E371BE99D3500F55609 /* AppDelegate.swift */; };
 		84B52E3A1BE99D3500F55609 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B52E391BE99D3500F55609 /* ViewController.swift */; };
 		84B52E3D1BE99D3500F55609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B52E3B1BE99D3500F55609 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		844D31FE1BF2DD63001DF427 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		84B52E341BE99D3500F55609 /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B52E371BE99D3500F55609 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B52E391BE99D3500F55609 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				84B52E3E1BE99D3500F55609 /* Assets.xcassets */,
 				84B52E401BE99D3500F55609 /* LaunchScreen.storyboard */,
 				84B52E431BE99D3500F55609 /* Info.plist */,
+				844D31FE1BF2DD63001DF427 /* QuestionViewController.swift */,
 			);
 			path = iQuiz;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				84B52E3A1BE99D3500F55609 /* ViewController.swift in Sources */,
 				84B52E381BE99D3500F55609 /* AppDelegate.swift in Sources */,
+				844D31FF1BF2DD63001DF427 /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +487,7 @@
 				84B52E5E1BE99D3500F55609 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84B52E5F1BE99D3500F55609 /* Build configuration list for PBXNativeTarget "iQuizTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +496,7 @@
 				84B52E611BE99D3500F55609 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84B52E621BE99D3500F55609 /* Build configuration list for PBXNativeTarget "iQuizUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +505,7 @@
 				84B52E641BE99D3500F55609 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
