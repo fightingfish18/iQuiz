@@ -13,10 +13,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let subjects : [String] = ["Mathematics", "Marvel Super Heroes", "Science"];
     let descriptions : [String] = ["One of the oldest fields of study", "Pop culture and super heroes!", "The study of life, the universe, and everything"];
     
+    let mathQuestions : [String] = ["What is 2 + 2?", "What is 3 x 3?", "How many sides does a triangle have?"];
+    let mathAnswers : [String] = ["4", "9", "3"];
+    let mathChoices : [[String]] = [["4", "5", "2", "3"], ["3", "87", "9", "2"], ["2", "4", "6", "3"]];
+    
+    let scienceQuestions : [String] = ["How many particles make up an atom?", "What is the study of life called?", "What is the acceleration of gravity?"];
+    let scienceAnswers : [String] = ["3", "Biology", "9.8 m/s^2"];
+    let scienceChoices : [[String]] = [["5", "7", "9", "3"], ["Biology", "Physics", "Fission", "Chemistry"], ["7 m/s^2", "8 m/s ^2", "9.8 m/s^2", "10.5 m/s^2"]];
+    
+    let marvelQuestions : [String] = ["Who is the leader of the X-Men?", "Who is the Norse god of thunder?"];
+    let marvelAnswers : [String] = ["Professor Charles Xavier", "Thor"];
+    let marvelChoices : [[String]] = [["Wolverine", "Professor Charles Xavier", "Syndra", "Cyclops"], ["Thor", "Loki", "Sabretooth", "Captain America"]];
+    
     @IBOutlet
     var tableView : UITableView!;
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     var selectedItem : String!;
+    var selectedQuiz : Quiz!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +48,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if (segue.identifier == "questionSegue") {
             let svc = segue!.destinationViewController as! QuestionViewController;
             svc.subjectText = self.selectedItem;
+            switch(self.selectedItem) {
+            case "Mathematics":
+                self.selectedQuiz = Quiz(questions: mathQuestions, answers : mathAnswers, choices : mathChoices, subject : self.selectedItem);
+            case "Science":
+                self.selectedQuiz = Quiz(questions: scienceQuestions, answers: scienceAnswers, choices : scienceChoices, subject : self.selectedItem);
+            case "Marvel Super Heroes":
+                self.selectedQuiz = Quiz(questions: marvelQuestions, answers: marvelAnswers, choices: marvelChoices, subject : self.selectedItem);
+            default:
+                "asdf";
+            }
+            svc.quiz = self.selectedQuiz;
         }
     }
     
@@ -56,8 +80,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         self.selectedItem = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text;
         self.performSegueWithIdentifier("questionSegue", sender: self);
-        NSLog("Pressed");
-        
     }
     
     func settingsAlert(sender: UIBarButtonItem) {
