@@ -17,8 +17,9 @@ class Quiz {
     var wasCorrect : Bool!;
     var isFinished : Bool;
     var subject : String;
+    var description : String;
     
-    init(questions : [String], answers : [String], choices : [[String]], subject : String) {
+    init(questions : [String], answers : [String], choices : [[String]], subject : String, description : String) {
         self.questions = questions;
         self.answers = answers;
         self.choices = choices;
@@ -26,6 +27,7 @@ class Quiz {
         self.correctAnswer = 0;
         self.isFinished = false;
         self.subject = subject;
+        self.description = description;
     }
     
     func askQuestion() -> String {
