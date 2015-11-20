@@ -96,6 +96,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if rawData != nil {
             do {
                 data = try NSJSONSerialization.JSONObjectWithData(rawData!, options: NSJSONReadingOptions.AllowFragments) as! [NSDictionary];
+                //quizzes = [Quiz]();
                 for item in data {
                     let title = item["title"] as! String;
                     print(title);
